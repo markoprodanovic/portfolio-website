@@ -1,0 +1,20 @@
+.toggle_button {
+    height: 30px;
+    width: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 1.5rem;
+}
+
+.toggle_button:focus {
+    outline: none;
+}
+
+.toggle_button i {
+    font-size: 1.3rem;
+}
+
+@media screen and (min-width: 600px) {
+    .toggle_button {display: none}
+}
