@@ -5,7 +5,7 @@ import classes from './Nav.module.css';
 const nav = props => (
     <header className={props.shadow ? [classes.toolbar, classes.shadow].join(' ') : classes.toolbar}>
         <nav className={classes.navbar}>
-            <div>
+            <div className={classes.burger}>
                 <DrawerToggleButton click={props.drawerClickHandler} />
             </div>
             <div className={classes.logo}><a href="/">Marko Prodanovic</a></div>

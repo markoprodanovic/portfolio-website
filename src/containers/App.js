@@ -1,15 +1,26 @@
 import React, { Component } from 'react';
 
 import Nav from '../components/Nav/Nav';
-import SideDrawer from '../components/SideDrawer/SideDrawer';
+import Footer from '../components/Footer/Footer';
+import Feature from '../components/Feature/Feature';
 import Backdrop from '../components/Backdrop/Backdrop';
+import Projects from '../components/Projects/Projects';
+import SideDrawer from '../components/SideDrawer/SideDrawer';
 
 import './App.css';
 
 class App extends Component {
   state = {
     sideDrawerOpen: false,
-    navShadow: false
+    navShadow: false,
+    currentHat: 'a Software Developer',
+    hats: [
+      'a filmmaker',
+      'a mediocre music producer',
+      'Serbian-Canadian',
+      'addicted to Nutella',
+      'coding at 3am currently'
+    ]
   };
 
   componentDidMount = () => {
@@ -35,6 +46,18 @@ class App extends Component {
     (scroll > 3) ? this.setState({ navShadow: true }) : this.setState({ navShadow: false });
   }
 
+  featureClickHandler = (event) => {
+
+    let newHat;
+    do {
+      newHat = this.state.hats[Math.floor(Math.random() * this.state.hats.length)];
+    }
+    while (newHat == this.state.currentHat);
+
+    this.setState({
+      currentHat: newHat
+    });
+  }
   render() {
     let backdrop;
 
@@ -47,9 +70,9 @@ class App extends Component {
         <Nav drawerClickHandler={this.drawerToggleClickHandler} shadow={this.state.navShadow} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
-        <main style={{ marginTop: '64px' }}>
-          <p>This is the page content</p>
-        </main>
+        <Feature hat={this.state.currentHat} click={this.featureClickHandler} />
+        <Projects />
+        <Footer />
       </div >
     );
   }

@@ -1,0 +1,47 @@
+.feature {
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    margin-top: 64px;
+    justify-content: space-evenly;
+    animation: fadein 2s;
+}
+
+.feature__content {
+    margin: 0 auto;
+    width: 70%;
+    height: 120px;
+}
+
+.feature__content p {
+    /* text-align: left; */
+    font-size: 2rem;
+}
+
+.Fab {
+    width: 12px;
+}
+
+@media screen and (max-width: 600px) {
+    .feature__content p {
+        font-size: 1.5rem;
+    }
+    .feature {
+        height: 15rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .feature__content p {
+        font-size: 1.1rem;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}

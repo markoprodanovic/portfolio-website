@@ -14,8 +14,14 @@
 
 .navbar {
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.burger {
+    display: none;
 }
 
 .logo {
@@ -27,10 +33,6 @@
     font-weight: bold;
     font-size: 1.4rem;
     color: #282828;
-}
-
-.spacer {
-    flex: 1;
 }
 
 .nav_items ul {
@@ -58,5 +60,23 @@
 }
 
 @media screen and (max-width: 600px) {
+    .burger {
+        display: flex;
+        flex: 1;
+    }
+    .navbar {
+        justify-content: none;
+    }
     .nav_items {display: none;}
+    .spacer {
+        display: flex;
+        flex: 1;
+    }
+    .logo {
+        margin-left: 0;
+        justify-self: center;
+    }
+    .logo a {
+        font-size: 1.6rem;
+    }
   }
