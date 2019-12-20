@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 
 // components
 import Nav from '../Nav/Nav';
-import Footer from '../Footer/Footer';
 import Backdrop from '../Backdrop/Backdrop';
 import SideDrawer from '../SideDrawer/SideDrawer';
 
@@ -77,7 +76,6 @@ class App extends Component {
               <NotFound />
             </Route>
           </Switch>
-          <Footer />
         </div >
       </Router >
     );

@@ -1,0 +1,39 @@
+.links {
+    height: 15rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 2rem;
+}
+
+.links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    /* font-size: 2rem; */
+    color: rgba(0, 0, 0, 0.84);
+}
+
+.links a span {
+    /* font-size: 2rem; */
+    margin-right: 0.5rem;
+}
+
+.links a:hover,
+.links a:active {
+    color: #00897b;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+    .links {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .links {
+        font-size: 1.2rem;
+    }
+}

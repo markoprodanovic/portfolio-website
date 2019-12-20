@@ -1,7 +1,11 @@
 import React from 'react';
+import Links from '../components/Links/Links';
+import classes from './pages.module.css';
 
 const contact = props => (
-    <h2 style={{ marginTop: '100px' }}>Contact Page</h2>
+    <div className={[classes.page, classes.static].join(' ')}>
+        <Links />
+    </div>
 );
 
 export default contact;

@@ -1,7 +1,12 @@
 import React from 'react';
+import classes from './pages.module.css';
+import Footer from '../components/Footer/Footer';
 
 const resume = props => (
-    <h2 style={{ marginTop: '100px' }}>Resume Page</h2>
+    <div className={classes.page}>
+        <h2>Resume Page</h2>
+        <Footer />
+    </div>
 );
 
 export default resume;

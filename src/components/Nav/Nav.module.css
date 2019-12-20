@@ -52,13 +52,10 @@
     color: rgba(0, 0, 0, 0.84);
 }
 
-.nav_items a:hover {
+.nav_items a:hover,
+.nav_items a:active {
     color: #00897b;
     font-weight: 600;
-}
-
-.nav_items a:active {
-    font-weight: bold;
 }
 
 @media screen and (max-width: 600px) {

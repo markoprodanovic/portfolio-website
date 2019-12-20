@@ -1,7 +1,12 @@
 import React from 'react';
+import classes from './pages.module.css';
+import Footer from '../components/Footer/Footer';
 
 const about = props => (
-    <h2 style={{ marginTop: '100px' }}> About Page</h2 >
+    <div className={classes.page}>
+        <h2> About Page</h2>
+        <Footer />
+    </div>
 );
 
 export default about;

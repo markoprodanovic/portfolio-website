@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Footer from '../components/Footer/Footer';
 import Feature from '../components/Feature/Feature';
 import Projects from '../components/Projects/Projects';
 
@@ -33,6 +34,7 @@ class Home extends Component {
             <div>
                 <Feature hat={this.state.currentHat} click={this.featureClickHandler} />
                 <Projects />
+                <Footer />
             </div>
         );
     }

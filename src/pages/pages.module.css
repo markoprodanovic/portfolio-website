@@ -1,5 +1,12 @@
 .page {
     margin-top: 100px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.static {
+    width: 100%;
+    height: 100%;
+    position: fixed;
 }
