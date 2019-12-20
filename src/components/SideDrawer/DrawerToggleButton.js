@@ -6,7 +6,7 @@ import classes from './DrawerToggleButton.module.css';
 const drawerToggleButton = props => (
     <div className={classes.container}>
         <IconButton className={classes.toggle_button} onClick={props.click}>
-            <Icon className="fas fa-bars fa-lg" />
+            <Icon className="fas fa-bars" />
         </IconButton>
     </div>
 );

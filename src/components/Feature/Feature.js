@@ -7,7 +7,7 @@ const feature = props => (
     <div className={classes.feature}>
         <div className={classes.feature__content}>
             <p>Hi, I'm Marko.</p>
-            <p>I'm <strong>{props.hat}</strong>.</p>
+            <p>I'm <span className={classes.hat}>{props.hat}</span>.</p>
         </div>
         <div className={classes.feature__button__div}>
             <IconButton className={classes.feature__button} onClick={props.click}>

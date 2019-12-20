@@ -25,6 +25,7 @@
 }
 
 .logo {
+    display: flex;
     margin-left: 2rem;
 }
 
@@ -55,14 +56,12 @@
 .nav_items a:hover,
 .nav_items a:active {
     color: #00897b;
-    font-weight: 600;
 }
 
 @media screen and (max-width: 600px) {
     .burger {
         display: flex;
         flex: 1;
-        /* margin-left: 2em; */
     }
     .navbar {
         justify-content: none;
@@ -74,9 +73,14 @@
     }
     .logo {
         margin-left: 0;
-        justify-self: center;
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
     .logo a {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
     }
   }

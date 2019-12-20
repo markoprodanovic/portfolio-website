@@ -1,15 +1,22 @@
 .container {
-    margin-left: 2rem;
+    margin-left: 1rem;
+    display: flex;
+    
 }
 
 .container .toggle_button {
-    height: 45px;
-    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: transparent;
     border: none;
     cursor: pointer;
-    font-size: 1.3rem;
-    color: #000;
+    color: rgba(0, 0, 0, 0.84);
+}
+
+.container .toggle_button span {
+    justify-self: center;
+    font-size: 1.5rem;
 }
 
 .toggle_button:focus {
@@ -18,4 +25,10 @@
 
 @media screen and (min-width: 600px) {
     .toggle_button {display: none}
+}
+
+@media screen and (max-width: 600px) {
+    .toggle_button span {
+        margin: 0;
+    }
 }

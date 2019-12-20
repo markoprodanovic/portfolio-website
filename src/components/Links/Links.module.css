@@ -20,10 +20,8 @@
     margin-right: 0.5rem;
 }
 
-.links a:hover,
-.links a:active {
+.links a:hover{
     color: #00897b;
-    font-weight: 600;
 }
 
 @media screen and (max-width: 600px) {
@@ -34,6 +32,6 @@
 
 @media screen and (max-width: 400px) {
     .links {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 }
