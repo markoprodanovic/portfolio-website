@@ -31,13 +31,14 @@
 }
 
 .side_drawer a {
+    /* font-family: 'PT Serif', serif; */
     color: #282828;
     text-decoration: none;
     font-size: 2rem;
-    font-weight: bold;
 }
 
 .side_drawer a:hover,
 .side_drawer a:active {
-    color: #6e6e6e;
+    color: #00897b;
+    font-weight: 600;
 }

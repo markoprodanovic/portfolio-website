@@ -4,4 +4,26 @@
     -webkit-box-shadow: 0px 0px 10px -6px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 10px -6px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 10px -6px rgba(0,0,0,0.75);
+    font-family: 'PT Serif', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5em;
+    background-color: #fff;
+    color: white;
+}
+
+.projectCard:hover,
+.projectCard:active {
+    animation: fadein 0.8s;
+    background-color: rgba(0,137,123,0.2);
+}
+
+@keyframes fadein {
+    from {
+        background-color: #fff;
+    }
+    to {
+        background-color: rgba(0,137,123,0.2);
+    }
 }

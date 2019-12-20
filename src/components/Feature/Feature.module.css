@@ -18,6 +18,10 @@
     font-size: 2rem;
 }
 
+.feature__button__div .feature__button{
+    color: #00897b;
+}
+
 .Fab {
     width: 12px;
 }

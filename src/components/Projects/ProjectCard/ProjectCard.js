@@ -3,7 +3,7 @@ import classes from './ProjectCard.module.css'
 
 const projectCard = props => (
     <div className={classes.projectCard}>
-        <h3>PROJECT</h3>
+        <p>project</p>
     </div>
 );
 

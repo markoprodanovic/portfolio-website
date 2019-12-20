@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton'
 import classes from './Nav.module.css';
 
@@ -8,18 +9,18 @@ const nav = props => (
             <div className={classes.burger}>
                 <DrawerToggleButton click={props.drawerClickHandler} />
             </div>
-            <div className={classes.logo}><a href="/">Marko Prodanovic</a></div>
+            <div className={classes.logo}><Link to="/">marko prodanovic</Link></div>
             <div className={classes.spacer} />
             <div className={classes.nav_items}>
                 <ul>
                     <li>
-                        <a href="#">About</a>
+                        <Link to="/about">About</Link>
                     </li>
                     <li>
-                        <a href="#">Resume</a>
+                        <Link to="/resume">Resume</Link>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <Link to="/contact">Contact</Link>
                     </li>
                 </ul>
             </div>

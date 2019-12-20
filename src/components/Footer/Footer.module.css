@@ -9,11 +9,12 @@
 
 .icons a {
     margin: 0 5px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.84);
 }
 
 .icons a i {
-    font-size: 1.2em;
-    color: #000;
+    font-size: 1.5em;
 }
 
 /* .madeWith i {

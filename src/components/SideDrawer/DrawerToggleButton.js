@@ -1,10 +1,14 @@
 import React from 'react';
+import IconButton from '@material-ui/core/IconButton';
+import Icon from '@material-ui/core/Icon';
 import classes from './DrawerToggleButton.module.css';
 
 const drawerToggleButton = props => (
-    <button className={classes.toggle_button} onClick={props.click}>
-        <i className="fa fa-bars fa-lg"></i>
-    </button>
+    <div className={classes.container}>
+        <IconButton className={classes.toggle_button} onClick={props.click}>
+            <Icon className="fas fa-bars fa-lg" />
+        </IconButton>
+    </div>
 );
 
 export default drawerToggleButton;

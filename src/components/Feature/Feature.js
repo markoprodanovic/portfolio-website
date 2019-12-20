@@ -1,5 +1,6 @@
 import React from 'react';
-import Fab from '@material-ui/core/Fab';
+import IconButton from '@material-ui/core/IconButton';
+import Icon from '@material-ui/core/Icon';
 import classes from './Feature.module.css';
 
 const feature = props => (
@@ -8,10 +9,10 @@ const feature = props => (
             <p>Hi, I'm Marko.</p>
             <p>I'm <strong>{props.hat}</strong>.</p>
         </div>
-        <div>
-            <Fab color="primary" variant="extended" onClick={props.click}>
-                Change Hat
-            </Fab>
+        <div className={classes.feature__button__div}>
+            <IconButton className={classes.feature__button} onClick={props.click}>
+                <Icon className="fas fa-random" />
+            </IconButton>
         </div>
     </div>
 );

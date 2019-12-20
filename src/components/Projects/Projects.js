@@ -6,8 +6,6 @@ const projects = props => (
     <div className={classes.projects}>
         <ProjectCard />
         <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
     </div>
 );
 

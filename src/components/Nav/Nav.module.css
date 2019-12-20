@@ -25,14 +25,15 @@
 }
 
 .logo {
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 
 .logo a {
+    font-family: 'PT Serif', serif;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.4rem;
-    color: #282828;
+    font-weight: 600;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.84);
 }
 
 .nav_items ul {
@@ -43,16 +44,17 @@
 }
 
 .nav_items li {
-    padding: 0 0.5rem;
+    padding: 0 1rem;
 }
 
 .nav_items a {
     text-decoration: none;
-    color: #282828;
+    color: rgba(0, 0, 0, 0.84);
 }
 
 .nav_items a:hover {
-    color: #6e6e6e;
+    color: #00897b;
+    font-weight: 600;
 }
 
 .nav_items a:active {
@@ -63,6 +65,7 @@
     .burger {
         display: flex;
         flex: 1;
+        /* margin-left: 2em; */
     }
     .navbar {
         justify-content: none;
