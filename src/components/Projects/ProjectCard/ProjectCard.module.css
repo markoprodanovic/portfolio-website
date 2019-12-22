@@ -1,11 +1,15 @@
 
 .projectCard {
     height: 300px;
-    -webkit-box-shadow: 0px 0px 10px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 10px -6px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 10px -6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 1px 7px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 1px 7px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 7px rgba(0,0,0,0.2);
     font-family: 'PT Serif', serif;
     position: relative;
+    /* width: 25%; */
+    /* padding-bottom: 25%; */
+    /* float: left; */
+    /* height: 0; */
     /* display: flex; */
     /* flex-direction: column; */
     /* justify-content: center; */
@@ -13,13 +17,24 @@
     object-fit: cover;
 }
 
-.projectCard:hover .overlay{
+.projectCard img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* DISABLED OVERLAY. UNCOMMENT TO ENABLE */
+/* .projectCard:hover .overlay{
     display: flex;
     flex-direction: column;
     align-items: center;
     animation: fadein 0.8s;
     background-color: rgba(0,137,123,0.8);
-}
+} */
 
 .overlay {
     display: none;
@@ -40,16 +55,36 @@
     text-decoration: none;
 }
 
-.projectCard img {
-    max-height: 100%;
-    width: 100%;
-    object-fit: cover;
+.links a {
+    -webkit-box-shadow: 0px 1px 7px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 1px 7px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 7px rgba(0,0,0,0.2);
+    display: inline-block;
+    height: 100%;
+    margin: 2em 1em;
+    padding: 10px;
+    border-radius:50%;
+    background-color: #fff;
+    color: #000;
+    /* box-shadow: 3px 3px 3px; */
 }
 
 @media screen and (max-width: 600px) {
     .projectCard:hover {
         animation: none;
         background-color: #fff;
+    }
+    
+    .links {
+        padding: 15px;
+    }
+
+    .links a {
+        margin: 1em;
+    }
+
+    .links span {
+        font-size: 2em;
     }
 }
 
