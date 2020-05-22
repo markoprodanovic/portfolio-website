@@ -23,7 +23,7 @@
     font-size: 2rem;
 }
 
-.feature__button__div .feature__button{
+.feature__button__div  span {
     color: #00897b;
 }
 

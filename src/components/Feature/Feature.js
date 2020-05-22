@@ -10,7 +10,7 @@ const feature = props => (
             <p>I'm <span className={classes.hat}>{props.hat}</span>.</p>
         </div>
         <div className={classes.feature__button__div}>
-            <IconButton className={classes.feature__button} onClick={props.click}>
+            <IconButton onClick={props.click}>
                 <Icon className="fas fa-random" />
             </IconButton>
         </div>
