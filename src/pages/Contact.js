@@ -1,11 +1,11 @@
-import React from 'react';
-import Links from '../components/Links/Links';
-import classes from './pages.module.css';
+import React from 'react'
+import styles from './pages.module.css'
+import Links from '../components/Links/Links'
 
-const contact = props => (
-    <div className={[classes.page, classes.static].join(' ')}>
-        <Links />
-    </div>
-);
+const contact = () => (
+  <div className={[styles.page, styles.static].join(' ')}>
+    <Links />
+  </div>
+)
 
-export default contact;
+export default contact

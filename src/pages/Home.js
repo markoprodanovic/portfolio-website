@@ -1,43 +1,60 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react'
 
-import Footer from '../components/Footer/Footer';
-import Feature from '../components/Feature/Feature';
-import Projects from '../components/Projects/Projects';
+import Footer from '../components/Footer/Footer'
+import Feature from '../components/Feature/Feature'
+import Projects from '../components/Projects/Projects'
 
-class Home extends Component {
-    state = {
-        currentHat: 'a Software Developer',
-        hats: [
-            'a filmmaker',
-            'a mediocre music producer',
-            'Serbian-Canadian',
-            'addicted to Nutella',
-            'coding at 3am currently'
-        ]
+const Home = () => {
+  const [currentDescription, setcurrentDescription] = useState(
+    'a Software Engineer'
+  )
+  const [descriptions, setDescriptions] = useState([
+    'a hobbiest filmmaker',
+    'a dabbling designer',
+    'a mediocre music producer',
+    'Serbian-Canadian',
+    'a UBC grad (Media Studies & Computer Science)',
+    'addicted to Nutella',
+    'coding at 3am currently',
+  ])
+  const [recentlyUsedDescriptions, setRecentlyUsedDescriptions] = useState([
+    'a Software Engineer',
+  ])
+
+  useEffect(() => {
+    // if descriptions is empty replace with recentlyUsedDescriptions
+    if (descriptions.length <= 0) {
+      setDescriptions(recentlyUsedDescriptions)
+      setRecentlyUsedDescriptions([])
     }
+  }, [descriptions, recentlyUsedDescriptions])
 
-    featureClickHandler = (event) => {
+  const featureClickHandler = (event) => {
+    let newDescription
+    let randomIndex
 
-        let newHat;
-        do {
-            newHat = this.state.hats[Math.floor(Math.random() * this.state.hats.length)];
-        }
-        while (newHat === this.state.currentHat);
+    do {
+      randomIndex = Math.floor(Math.random() * descriptions.length)
+      newDescription = descriptions[randomIndex]
+    } while (newDescription === currentDescription)
 
-        this.setState({
-            currentHat: newHat
-        });
-    }
+    // remove the new description from descriptions list
+    setDescriptions(descriptions.filter((d) => d !== newDescription))
 
-    render() {
-        return (
-            <div>
-                <Feature hat={this.state.currentHat} click={this.featureClickHandler} />
-                <Projects />
-                <Footer />
-            </div>
-        );
-    }
-};
+    // add the chosen description to recentlyUsedDescriptions
+    setRecentlyUsedDescriptions([...recentlyUsedDescriptions, newDescription])
 
-export default Home;
+    // set description
+    setcurrentDescription(newDescription)
+  }
+
+  return (
+    <div>
+      <Feature hat={currentDescription} click={featureClickHandler} />
+      <Projects />
+      <Footer />
+    </div>
+  )
+}
+
+export default Home
