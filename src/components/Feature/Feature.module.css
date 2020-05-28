@@ -28,7 +28,7 @@
 }
 
 .button {
-  margin-top: 1rem;
+  margin-top: 1.3rem;
 }
 
 .button span {
@@ -39,6 +39,7 @@
   text-align: left;
   margin-left: 1rem;
   width: 20rem;
+  height: 8rem;
 }
 
 .featureText p {
