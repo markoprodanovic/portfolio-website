@@ -11,12 +11,11 @@ const Feature = () => {
   const [descriptions, setDescriptions] = useState([
     'a hobbiest filmmaker',
     'a dabbling designer',
-    'a mediocre music producer',
+    'into web development & design',
     'Serbian-Canadian',
-    'tabs over spaces',
+    'passionate about building great software',
     'a Media Studies & Computer Science grad',
     'addicted to Nutella',
-    'coding at 3am currently',
   ])
   const [recentlyUsedDescriptions, setRecentlyUsedDescriptions] = useState([
     'a Software Engineer',
