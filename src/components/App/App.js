@@ -1,85 +1,87 @@
 // react and react-router
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
 
 // components
-import Nav from '../Nav/Nav';
-import Backdrop from '../Backdrop/Backdrop';
-import SideDrawer from '../SideDrawer/SideDrawer';
+import Nav from '../Nav/Nav'
+import Backdrop from '../Backdrop/Backdrop'
+import SideDrawer from '../SideDrawer/SideDrawer'
 
 // pages
-import Home from '../../pages/Home';
-import About from '../../pages/About';
-import Resume from '../../pages/Resume';
-import Contact from '../../pages/Contact';
-import NotFound from '../../pages/NotFound';
+import Home from '../../pages/Home'
+import About from '../../pages/About'
+import Resume from '../../pages/Resume'
+import Contact from '../../pages/Contact'
+import NotFound from '../../pages/NotFound'
 
 // styles
-import './App.css';
+import './App.css'
 
-class App extends Component {
-  state = {
-    sideDrawerOpen: false,
-    navShadow: false,
-  };
+const App = () => {
+  const [sideDrawerOpen, setSideDrawerOpen] = useState(false)
+  const [navShadow, setNavShadow] = useState(false)
 
-  componentDidMount = () => {
-    window.addEventListener('scroll', this.handleScroll);
-  };
+  // runs when component is mounted
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+  }, [])
 
-  componentWillUnmount = () => {
-    window.removeEventListener('scroll', this.handleScroll);
-  };
-
-  drawerToggleClickHandler = () => {
-    this.setState((prevState) => {
-      return { sideDrawerOpen: !prevState.sideDrawerOpen };
-    });
-  };
-
-  backdropClickHandler = () => {
-    this.setState({ sideDrawerOpen: false });
-  };
-
-  handleScroll = (event) => {
-    let scroll = window.scrollY;
-    (scroll > 3) ? this.setState({ navShadow: true }) : this.setState({ navShadow: false });
-  }
-
-  render() {
-    let backdrop;
-
-    if (this.state.sideDrawerOpen) {
-      backdrop = <Backdrop click={this.backdropClickHandler} />
+  // runs before component is unmounted
+  useEffect(() => {
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
     }
+  }, [])
 
-    return (
-      <Router>
-        <div className="App" onScroll={this.handleScroll}>
-          <Nav drawerClickHandler={this.drawerToggleClickHandler} shadow={this.state.navShadow} />
-          <SideDrawer show={this.state.sideDrawerOpen} click={this.drawerToggleClickHandler} />
-          {backdrop}
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/resume">
-              <Resume />
-            </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
-            <Route path="*">
-              <NotFound />
-            </Route>
-          </Switch>
-        </div >
-      </Router >
-    );
+  const toggleDrawerClickHandler = () => {
+    let flipped = !sideDrawerOpen
+    setSideDrawerOpen(flipped)
   }
+
+  const closeDrawerClickHandler = () => {
+    setSideDrawerOpen(false)
+  }
+
+  const handleScroll = (e) => {
+    let scroll = window.scrollY
+    scroll > 3 ? setNavShadow(true) : setNavShadow(false)
+  }
+
+  let backdrop
+
+  if (sideDrawerOpen) {
+    backdrop = <Backdrop closeDrawer={closeDrawerClickHandler} />
+  }
+
+  return (
+    <Router>
+      <div className="App" onScroll={handleScroll}>
+        <Nav toggleDrawer={toggleDrawerClickHandler} shadow={navShadow} />
+        <SideDrawer
+          isShown={sideDrawerOpen}
+          closeDrawer={closeDrawerClickHandler}
+        />
+        {backdrop}
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/resume">
+            <Resume />
+          </Route>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  )
 }
 
-export default App;
+export default App

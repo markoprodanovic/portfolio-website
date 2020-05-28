@@ -1,18 +1,14 @@
-import React from 'react';
-import classes from './Footer.module.css';
-import Icon from '@material-ui/core/Icon';
+import React from 'react'
+import classes from './Footer.module.css'
 
-const footer = props => {
-    const linkedin = 'https://ca.linkedin.com/in/mprodanovic';
-    const github = 'https://github.com/markoprodanovic';
-    return (
-        <div className={classes.footer}>
-            <div className={classes.icons}>
-                <a href={github} target="_blank"><Icon className="fab fa-github"></Icon></a>
-                <a href={linkedin} target="_blank"><Icon className="fab fa-linkedin-in"></Icon></a>
-            </div>
-        </div>
-    );
+const footer = () => {
+  return (
+    <div className={classes.footer}>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        ~ Designed & Built by Marko ~
+      </a>
+    </div>
+  )
 }
 
-export default footer;
+export default footer
