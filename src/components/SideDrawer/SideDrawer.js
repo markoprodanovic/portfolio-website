@@ -1,31 +1,40 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import classes from './SideDrawer.module.css'
+import styles from './SideDrawer.module.css'
 
-const sideDrawer = (props) => {
-  let drawerClasses = [classes.side_drawer]
-  if (props.show) {
-    drawerClasses = [classes.side_drawer, classes.open]
+const SideDrawer = ({ isShown, closeDrawer }) => {
+  let drawerStyles = [styles.side_drawer]
+
+  if (isShown) {
+    drawerStyles = [styles.side_drawer, styles.open]
   }
 
   return (
-    <nav className={drawerClasses.join(' ')}>
+    <nav className={drawerStyles.join(' ')}>
       <ul>
-        <li onClick={props.click}>
-          <Link to="/">Home</Link>
+        <li onClick={closeDrawer}>
+          <span className={styles.underline}>
+            <Link to="/">Home</Link>
+          </span>
         </li>
-        <li onClick={props.click}>
-          <Link to="/about">About</Link>
+        <li onClick={closeDrawer}>
+          <span className={styles.underline}>
+            <Link to="/about">About</Link>
+          </span>
         </li>
-        <li onClick={props.click}>
-          <Link to="/contact">Contact</Link>
+        <li onClick={closeDrawer}>
+          <span className={styles.underline}>
+            <Link to="/contact">Contact</Link>
+          </span>
         </li>
-        <li onClick={props.click}>
-          <Link to="/resume">Resume</Link>
+        <li onClick={closeDrawer}>
+          <Link className={styles.resume} to="/resume">
+            Resume
+          </Link>
         </li>
       </ul>
     </nav>
   )
 }
 
-export default sideDrawer
+export default SideDrawer

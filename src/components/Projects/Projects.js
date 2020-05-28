@@ -1,15 +1,17 @@
-import React from 'react';
-import classes from './Projects.module.css'
+import React from 'react'
+import styles from './Projects.module.css'
 import ProjectCard from './ProjectCard/ProjectCard'
 
-const projects = props => (
-    <div className={classes.container}>
-        <h2>- my work -</h2>
-        <div className={classes.projects}>
-            <ProjectCard />
-            <ProjectCard />
-        </div>
+const projects = () => (
+  <div className={styles.container}>
+    <h2>
+      <span className={styles.underline}>my work</span>
+    </h2>
+    <div className={styles.projects}>
+      <ProjectCard />
+      <ProjectCard />
     </div>
-);
+  </div>
+)
 
-export default projects;
+export default projects

@@ -1,25 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton'
-import classes from './Nav.module.css'
+import styles from './Nav.module.css'
 
-const nav = (props) => (
+const Nav = ({ toggleDrawer, shadow }) => (
   <header
     className={
-      props.shadow
-        ? [classes.toolbar, classes.shadow].join(' ')
-        : classes.toolbar
+      shadow ? [styles.toolbar, styles.shadow].join(' ') : styles.toolbar
     }
   >
-    <nav className={classes.navbar}>
-      <div className={classes.burger}>
-        <DrawerToggleButton click={props.drawerClickHandler} />
+    <nav className={styles.navbar}>
+      <div className={styles.burger}>
+        <DrawerToggleButton click={toggleDrawer} />
       </div>
-      <div className={classes.logo}>
-        <Link to="/">marko prodanovic</Link>
+      <div className={styles.logo}>
+        <span className={styles.underline}>
+          <Link to="/">marko prodanovic</Link>
+        </span>
       </div>
-      <div className={classes.spacer} />
-      <div className={classes.nav_items}>
+      <div className={styles.spacer} />
+      <div className={styles.nav_items}>
         <ul>
           <li>
             <Link to="/about">About</Link>
@@ -28,7 +28,9 @@ const nav = (props) => (
             <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <Link to="/resume">Resume</Link>
+            <Link className={styles.resume} to="/resume">
+              Resume
+            </Link>
           </li>
         </ul>
       </div>
@@ -36,4 +38,4 @@ const nav = (props) => (
   </header>
 )
 
-export default nav
+export default Nav
