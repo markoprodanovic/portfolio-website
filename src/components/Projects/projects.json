@@ -25,7 +25,7 @@
     },
     {
         "title": "Canvas Module Progress Dashboard",
-        "description": "The Canvas Module Progress Dashboard is a Python script and interactive dashboard made for UBC faculty. It's designed to provide instructors with a overview of student progress in their course on Canvas. The script collects and formats data from the Canvas LMS API. The data can then be hooked up to a collection of interactive dashboards we designed in Tableau.",
+        "description": "The Canvas Module Progress Dashboard is a Python script and interactive dashboard made for UBC faculty. It's designed to provide instructors with a overview of student progress in their course on Canvas. The script collects and formats data from the Canvas LMS API. The data can then be hooked up to a collection of interactive dashboards designed in Tableau.",
         "imgAddress": "/project-images/module-progress.png",
         "githubLInk": "https://github.com/saud-learning-services/module-progress",
         "demoLink": "https://public.tableau.com/profile/marko1654#!/vizhome/ModuleProgress/StartHereOverallStatus",
