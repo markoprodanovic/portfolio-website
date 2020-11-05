@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton'
 import styles from './Nav.module.css'
 
@@ -22,15 +23,18 @@ const Nav = ({ toggleDrawer, shadow }) => (
       <div className={styles.nav_items}>
         <ul>
           <li>
-            <Link to="/about">About</Link>
+            <HashLink to="/#about">About</HashLink>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <HashLink to="/#mywork">My Work</HashLink>
           </li>
           <li>
-            <Link className={styles.resume} to="/resume">
+            <HashLink to="/#contact">Contact</HashLink>
+          </li>
+          <li>
+            <a className={styles.resume} href="resume.pdf">
               Resume
-            </Link>
+            </a>
           </li>
         </ul>
       </div>

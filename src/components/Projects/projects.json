@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Python Automated Video Brander",
+        "description": "Python application that automates branding post-processing for educational video content at UBC Sauder. Integrates with the Panopto video platform and Google forms to allow faculty to submit a branding request with custom specifications, at which point the app will grab the video, apply branding to their specifications and reupload to Panopto.",
+        "imgAddress": "/project-images/automated-brander.png",
+        "githubLInk": "https://github.com/markoprodanovic/automated-video-brander",
+        "demoLink": "",
+        "stack" : ["Python", "ffmpeg", "Panopto API"]
+    },
+    {
+        "title": "Yuki Postal Service (YPS)",
+        "description": "YPS is a retro “album tracking service” created for New Zealand based musician Yuki, to generate excitement around an upcoming album. It was designed to resemble the postal tracking services of the mid-2000s and provide “shipping updates” to tease the album. Clicking on the update timestamps will play samples.",
+        "imgAddress": "/project-images/YPS.png",
+        "githubLInk": "https://github.com/markoprodanovic/yuki-postal-service",
+        "demoLink": "https://yuki-postal-service.herokuapp.com/",
+        "stack" : ["React", "Express.js", "MongoDB"]
+    },
+    {
+        "title": "UBC Learning Analytics Hackathon",
+        "description": "I was an organizer for the 2020 UBC Learning Analytics Hackathon. I helped write a lot of the starter code and instructional materials. Our physical event was cancelled due to COVID-19 but in October we ran it virtually! On the day I helped answer programming questions (especially helping new react/JS developers).",
+        "imgAddress": "/project-images/UBC-LA-Hackathon.png",
+        "githubLInk": "https://github.com/UBC-LA-Hackathon/student-dashboard",
+        "demoLink": "",
+        "stack" : ["React", "Node.js", "Express.js"]
+    },
+    {
+        "title": "Canvas Module Progress Dashboard",
+        "description": "The Canvas Module Progress Dashboard is a Python script and interactive dashboard made for UBC faculty. It's designed to provide instructors with a overview of student progress in their course on Canvas. The script collects and formats data from the Canvas LMS API. The data can then be hooked up to a collection of interactive dashboards we designed in Tableau.",
+        "imgAddress": "/project-images/module-progress.png",
+        "githubLInk": "https://github.com/saud-learning-services/module-progress",
+        "demoLink": "https://public.tableau.com/profile/marko1654#!/vizhome/ModuleProgress/StartHereOverallStatus",
+        "stack" : ["Python", "Pandas", "Tableau"]
+    }
+]

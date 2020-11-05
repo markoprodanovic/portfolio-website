@@ -1,11 +1,29 @@
 .projectCard {
-  height: 300px;
-  -webkit-box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.2);
-  font-family: 'PT Serif', serif;
-  position: relative;
+  margin-bottom: 2rem;
   background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 1.5rem;
+  position: relative;
+  top: 0;
+  transition: top ease 0.3s;
+  max-width: 600px;
+}
+
+.projectCard:hover {
+  top: -10px;
+}
+
+.imageContainer {
+  height: 300px;
+  position: relative;
+  object-fit: cover;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  max-height: 100%;
   object-fit: cover;
 }
 
@@ -15,6 +33,7 @@
 }
 
 .projectTitle {
+  font-size: 1.5rem;
   text-align: left;
   margin-bottom: 0.5rem;
 }
@@ -24,17 +43,7 @@
   flex-direction: row;
   align-items: center;
   text-align: left;
-  line-height: 1.2;
-}
-
-.projectCard img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  max-height: 100%;
-  width: 100%;
-  object-fit: cover;
+  line-height: 1.4;
 }
 
 .overlay {
@@ -56,62 +65,66 @@
   text-decoration: none;
 }
 
+.tools {
+  font-size: 1rem;
+  display: flex;
+  width: 100%;
+}
+
+.tools span {
+  margin-right: 1rem;
+  color: rgb(111, 111, 111);
+}
+
 .links {
-  text-align: left;
+  display: flex;
+  align-items: center;
 }
 
 .links a {
-  transition: 0.5s;
-  display: inline-block;
-  height: 100%;
-  margin: 0;
+  transition: 0.2s;
   margin-right: 1rem;
-  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-style: solid;
+  border-color: #00897b;
+  background-color: #fff;
+  color: #00897b;
+}
+
+.links a span {
+  margin-right: 0.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .links a:hover,
 .links a:active {
-  color: #00897b;
+  background-color: #00897b;
+  border-color: #00897b;
+  color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  .projectCard {
+    max-width: 80%;
+  }
+
+  .tools {
+    font-size: 0.8rem;
+    justify-content: space-evenly;
+  }
+
+  .tools span {
+    margin-right: 0rem;
+  }
 }
 
 .underline {
   display: inline-block;
   position: relative;
-}
-
-.underline:after {
-  content: '';
-  background: #00897b63;
-  position: absolute;
-  display: block;
-  z-index: -1;
-  width: 100%;
-  height: 0.6rem;
-  margin-top: -0.5rem;
-  margin-left: 0.4rem;
-}
-
-.container {
-  margin-bottom: 2rem;
-}
-
-@media screen and (max-width: 600px) {
-  .projectCard:hover {
-    animation: none;
-    background-color: #fff;
-  }
-
-  /* .links {
-    padding: 15px;
-  }
-
-  .links a {
-    margin: 1em;
-  }
-
-  .links span {
-    font-size: 2em;
-  } */
 }
 
 @keyframes fadein {

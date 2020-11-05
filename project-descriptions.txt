@@ -1,0 +1,19 @@
+
+Yuki Postal Service (YPS)
+
+YPS is a retro album tracking service created for New Zealand based musician (and close friend) Yuki. It was designed to mimic the postal tracking services of the mid-200s and was meant to build excitement around Yuki's album release. YPS doubles as a music streamer, providing fans samples of Yuki's music.
+
+
+UBC Learning Analytics Hackathon
+
+Contributor and part of organizing team for the 2020 UBC Learning Analytics Hackathon. Responsibilities included contributing boiler-plate (Node/Express & React), documentation, instructional materials and event organizing. Unfortunately, our phyisical event was postponed until further notice due to COVID-19, however the entire hackathon is online and available for anyone who's interested!
+
+
+Canvas Quiz Reports
+
+~description~
+
+
+Canvas Module Progress Dashboard
+
+~description~

@@ -1,0 +1,109 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+}
+
+.anchorMargin {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+}
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* margin: 3rem 0; */
+  font-weight: 800;
+  max-width: 50rem;
+}
+
+.image img {
+  width: 12rem;
+  padding-right: 2rem;
+}
+
+.aboutMe h2 {
+  font-size: 2rem;
+  align-self: left;
+  padding-top: 63px;
+  margin-top: -63px;
+}
+
+.content {
+  /* width: 100%; */
+  display: flex;
+  align-items: flex-start;
+}
+
+.text {
+  width: 100%;
+  padding: 0rem 2rem;
+  text-align: left;
+  font-weight: 400;
+}
+
+.underline {
+  display: inline-block;
+  position: relative;
+}
+
+.underline:after {
+  content: '';
+  background: #00897b9a;
+  position: absolute;
+  display: block;
+  z-index: -1;
+  width: 100%;
+  height: 0.6rem;
+  margin-top: -0.6rem;
+  margin-left: 0.4rem;
+}
+
+.skillsList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(60px, 280px));
+}
+
+.skillsList li {
+  padding: 0.2rem 0;
+}
+
+.skillsList li span {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 900px) {
+  .aboutMe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutMe h2 {
+    font-size: 1.5rem;
+  }
+
+  .image img {
+    padding: 0rem;
+    width: 8rem;
+  }
+
+  .text {
+    width: 100%;
+  }
+
+  .skillsList li span {
+    padding-right: 1.2rem;
+    font-size: 0.9rem;
+  }
+}

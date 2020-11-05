@@ -1,0 +1,15 @@
+.page {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.error {
+  padding-top: 10rem;
+}
+
+.error h2 {
+  font-size: 2rem;
+}

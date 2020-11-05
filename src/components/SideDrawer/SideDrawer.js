@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import styles from './SideDrawer.module.css'
 
 const SideDrawer = ({ isShown, closeDrawer }) => {
@@ -14,23 +14,23 @@ const SideDrawer = ({ isShown, closeDrawer }) => {
       <ul>
         <li onClick={closeDrawer}>
           <span className={styles.underline}>
-            <Link to="/">Home</Link>
+            <HashLink to="/#about">About</HashLink>
           </span>
         </li>
         <li onClick={closeDrawer}>
           <span className={styles.underline}>
-            <Link to="/about">About</Link>
+            <HashLink to="/#mywork">My Work</HashLink>
           </span>
         </li>
         <li onClick={closeDrawer}>
           <span className={styles.underline}>
-            <Link to="/contact">Contact</Link>
+            <HashLink to="/#contact">Contact</HashLink>
           </span>
         </li>
         <li onClick={closeDrawer}>
-          <Link className={styles.resume} to="/resume">
-            Resume
-          </Link>
+          <a className={styles.resume} href="resume.pdf">
+              Resume
+          </a>
         </li>
       </ul>
     </nav>

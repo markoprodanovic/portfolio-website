@@ -6,13 +6,14 @@ import React, { useState, useEffect } from 'react'
 import Nav from '../Nav/Nav'
 import Backdrop from '../Backdrop/Backdrop'
 import SideDrawer from '../SideDrawer/SideDrawer'
+import About from '../About/About'
 
-// pages
-import Home from '../../pages/Home'
-import About from '../../pages/About'
-import Resume from '../../pages/Resume'
-import Contact from '../../pages/Contact'
-import NotFound from '../../pages/NotFound'
+import Footer from '../Footer/Footer'
+import Contact from '../Contact/Contact'
+import Feature from '../Feature/Feature'
+import Projects from '../Projects/Projects'
+
+import NotFound from '..//NotFound/NotFound'
 
 // styles
 import './App.css'
@@ -62,23 +63,20 @@ const App = () => {
           closeDrawer={closeDrawerClickHandler}
         />
         {backdrop}
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="/resume">
-            <Resume />
-          </Route>
-          <Route path="*">
-            <NotFound />
-          </Route>
-        </Switch>
+        <div className="fadein">
+          <Switch>
+            <Route exact path="/">
+              <Feature />
+              <About />
+              <Projects />
+              <Contact />
+              <Footer />
+            </Route>
+            <Route path="*">
+              <NotFound />
+            </Route>
+          </Switch>
+        </div>
       </div>
     </Router>
   )
