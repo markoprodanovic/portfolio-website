@@ -1,7 +1,7 @@
 [
     {
         "title": "Python Automated Video Brander",
-        "description": "Python application that automates branding post-processing for educational video content at UBC Sauder. Integrates with the Panopto video platform and Google forms to allow faculty to submit a branding request with custom specifications, at which point the app will grab the video, apply branding to their specifications and reupload to Panopto.",
+        "description": "Python application that automates branding post-processing for educational video content at UBC Sauder. Integrates with the Panopto video platform and Google Forms to allow faculty to submit a branding request with custom specifications, at which point the app will grab the video, apply branding to their specifications and reupload to Panopto.",
         "imgAddress": "/project-images/automated-brander.png",
         "githubLInk": "https://github.com/markoprodanovic/automated-video-brander",
         "demoLink": "",
