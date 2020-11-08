@@ -18,6 +18,12 @@ import NotFound from '..//NotFound/NotFound'
 // styles
 import './App.css'
 
+// google analytics
+import ReactGA from 'react-ga'
+
+ReactGA.initialize('G-ZJ6EB5ZKD8')
+ReactGA.pageview(window.location.pathname + window.location.search)
+
 const App = () => {
   const [sideDrawerOpen, setSideDrawerOpen] = useState(false)
   const [navShadow, setNavShadow] = useState(false)
