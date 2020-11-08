@@ -112,6 +112,10 @@
     max-width: 80%;
   }
 
+  .description {
+    font-size: 0.9rem;
+  }
+
   .tools {
     font-size: 0.8rem;
     justify-content: space-evenly;
