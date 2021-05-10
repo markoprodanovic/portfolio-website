@@ -8,6 +8,14 @@
         "stack" : ["Python", "ffmpeg", "Panopto API"]
     },
     {
+        "title": "GitHub Issue Explorer",
+        "description": "A tool for exploring GitHub issues in a specific repo. Paste in a GitHub repo URL to see all issues. Filter by open, closed and pull requests.",
+        "imgAddress": "/project-images/github-issue-explorer.png",
+        "githubLInk": "https://github.com/markoprodanovic/github-issue-explorer",
+        "demoLink": "https://github-issue-tracker-mp.netlify.app/",
+        "stack" : ["React", "GitHub API"]
+    },
+    {
         "title": "Yuki Postal Service (YPS)",
         "description": "YPS is a retro “album tracking service” created for New Zealand based musician Yuki, to generate excitement around an upcoming album. It was designed to resemble the postal tracking services of the mid-2000s and provide “shipping updates” to tease the album. Clicking on the update timestamps will play samples.",
         "imgAddress": "/project-images/YPS.png",
@@ -22,13 +30,5 @@
         "githubLInk": "https://github.com/UBC-LA-Hackathon/student-dashboard",
         "demoLink": "",
         "stack" : ["React", "Node.js", "Express.js"]
-    },
-    {
-        "title": "Canvas Module Progress Dashboard",
-        "description": "The Canvas Module Progress Dashboard is a Python script and interactive dashboard made for UBC faculty. It's designed to provide instructors with a overview of student progress in their course on Canvas. The script collects and formats data from the Canvas LMS API. The data can then be hooked up to a collection of interactive dashboards designed in Tableau.",
-        "imgAddress": "/project-images/module-progress.png",
-        "githubLInk": "https://github.com/saud-learning-services/module-progress",
-        "demoLink": "https://public.tableau.com/profile/marko1654#!/vizhome/ModuleProgress/StartHereOverallStatus",
-        "stack" : ["Python", "Pandas", "Tableau"]
     }
 ]
