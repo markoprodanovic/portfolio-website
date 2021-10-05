@@ -1,11 +1,11 @@
 [
     {
         "title": "Python Automated Video Brander",
-        "description": "Python application that automates branding post-processing for educational video content at UBC Sauder. Integrates with the Panopto video platform and Google Forms to allow faculty to submit a branding request with custom specifications, at which point the app will grab the video, apply branding to their specifications and reupload to Panopto.",
+        "description": "Python tool that can automatically brand video content with custom intro/outro/watermark. Implemented at UBC Sauder as faculty-facing video post-production service  (processed over 850 videos since launch in August 2020).",
         "imgAddress": "/project-images/automated-brander.png",
         "githubLInk": "https://github.com/markoprodanovic/automated-video-brander",
         "demoLink": "",
-        "stack" : ["Python", "ffmpeg", "Panopto API"]
+        "stack": ["Python", "ffmpeg", "Panopto SOAP API", "Panopto REST API"]
     },
     {
         "title": "GitHub Issue Explorer",
@@ -13,22 +13,22 @@
         "imgAddress": "/project-images/github-issue-explorer.png",
         "githubLInk": "https://github.com/markoprodanovic/github-issue-explorer",
         "demoLink": "https://github-issue-tracker-mp.netlify.app/",
-        "stack" : ["React", "GitHub API"]
+        "stack": ["React", "GitHub API"]
     },
     {
-        "title": "Yuki Postal Service (YPS)",
-        "description": "YPS is a retro “album tracking service” created for New Zealand based musician Yuki, to generate excitement around an upcoming album. It was designed to resemble the postal tracking services of the mid-2000s and provide “shipping updates” to tease the album. Clicking on the update timestamps will play samples.",
-        "imgAddress": "/project-images/YPS.png",
-        "githubLInk": "https://github.com/markoprodanovic/yuki-postal-service",
-        "demoLink": "https://yuki-postal-service.herokuapp.com/",
-        "stack" : ["React", "Express.js", "MongoDB"]
+        "title": "(N)app",
+        "description": "A just-for-fun, not-applicable application (or 'napp'). This site is where I create tools and widgets to explore programming and design concepts.",
+        "imgAddress": "/project-images/napp.png",
+        "githubLInk": "https://github.com/markoprodanovic/napp",
+        "demoLink": "https://not-applicable.netlify.app/",
+        "stack": ["React", "styled-components"]
     },
     {
-        "title": "UBC Learning Analytics Hackathon",
-        "description": "I was an organizer for the 2020 UBC Learning Analytics Hackathon. I helped write a lot of the starter code and instructional materials. Our physical event was cancelled due to COVID-19 but in October we ran it virtually! On the day I helped answer programming questions (especially helping new react/JS developers).",
-        "imgAddress": "/project-images/UBC-LA-Hackathon.png",
-        "githubLInk": "https://github.com/UBC-LA-Hackathon/student-dashboard",
-        "demoLink": "",
-        "stack" : ["React", "Node.js", "Express.js"]
+        "title": "The Archies - Movie Nomination App",
+        "description": "A fictional movie nomination platform lovingly named after my cat Archie. Seach for your favourite films and customize your nomination list up to 5 movies.",
+        "imgAddress": "/project-images/the-archies.png",
+        "githubLInk": "https://github.com/markoprodanovic/the-archies",
+        "demoLink": "https://the-archies-marko-prodanovic.netlify.app/",
+        "stack": ["React", "OMDb API"]
     }
 ]
