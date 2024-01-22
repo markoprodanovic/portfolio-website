@@ -2,7 +2,7 @@
   "name": "portfolio-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://markoprodanovic.com",
   "dependencies": {
     "@babel/core": "^7.23.7",
     "@babel/plugin-proposal-async-generator-functions": "^7.20.7",
