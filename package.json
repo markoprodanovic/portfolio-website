@@ -1,44 +1,48 @@
 {
-    "name": "portfolio-website",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "@babel/core": "^7.23.7",
-        "@babel/plugin-proposal-async-generator-functions": "^7.20.7",
-        "@babel/preset-env": "^7.23.8",
-        "@babel/preset-react": "^7.23.3",
-        "@material-ui/core": "^4.8.0",
-        "@material-ui/icons": "^4.9.1",
-        "@testing-library/jest-dom": "^4.2.4",
-        "@testing-library/react": "^9.3.2",
-        "@testing-library/user-event": "^7.1.2",
-        "react": "^16.12.0",
-        "react-dom": "^16.12.0",
-        "react-ga": "^3.2.0",
-        "react-router-dom": "^5.1.2",
-        "react-router-hash-link": "^2.1.0",
-        "react-scripts": "^5.0.1",
-        "react-scrollable-anchor": "^0.6.1"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
-    },
-    "eslintConfig": {
-        "extends": "react-app"
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    }
+  "name": "portfolio-website",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": ".",
+  "dependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/plugin-proposal-async-generator-functions": "^7.20.7",
+    "@babel/preset-env": "^7.23.8",
+    "@babel/preset-react": "^7.23.3",
+    "@material-ui/core": "^4.8.0",
+    "@material-ui/icons": "^4.9.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-ga": "^3.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-router-hash-link": "^2.1.0",
+    "react-scripts": "^5.0.1",
+    "react-scrollable-anchor": "^0.6.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
 }
